@@ -1,0 +1,19 @@
+{
+    "name": "mannum/eventor",
+    "description": "Simple event-sourcing framework for EventStore.",
+    "keywords": ["event-sourcing"],
+
+    "authors": [
+      {
+        "name": "Alex Haproff",
+        "email": "alex@haproff.com"
+      }
+    ],
+    "require": {
+        "predis/predis": "^1.0",
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "autoload": {
+        "psr-4": {"Eventor\\": "src/Eventor"}
+    }
+}
