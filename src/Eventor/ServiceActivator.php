@@ -15,8 +15,6 @@ class ServiceActivator implements ServiceActivatorInterface
     public function traverseStream(EventStreamInterface $s, EventStreamCursorInterface $cursor)
     {
         foreach ($s as $event) {
-            $cursor->increment($s->getName());
-
             if (empty($this->activators[$event->getType()])) continue;
 
             try {
@@ -26,6 +24,8 @@ class ServiceActivator implements ServiceActivatorInterface
                 // @todo do something with exceptions here
                 var_dump($e->getMessage());
             }
+
+            $cursor->increment();
         }
     }
 

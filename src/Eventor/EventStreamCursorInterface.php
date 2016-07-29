@@ -4,6 +4,6 @@ namespace Eventor;
 
 interface EventStreamCursorInterface
 {
-    public function fetch($stream);
-    public function increment($stream);
+    public function fetch();
+    public function increment();
 }
